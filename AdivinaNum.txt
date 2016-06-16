@@ -1,0 +1,32 @@
+
+package adivinanum;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+/**
+ * @author Oliver Arauz
+ */
+public class AdivinaNum {
+    /**
+     * Este programa indica un numero a adivinar
+     */
+    public static void main(String[] args) throws Exception{
+    final double NUM=7;
+          double R;
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));    
+    System.out.println("Este programa indica un numero a adivinar en 3 intentos\n");
+    
+    for (int i=1;i<4;i++){
+    System.out.print("Intento "+i+" Ingrese un numero: ");   //pide datos, ingresar datos
+    R=Double.parseDouble(br.readLine());   //**se leen y convierten los datos a Double*/ 
+       if (R<NUM){  
+         System.out.println("Muy bajo");}
+       if (R>NUM){ 
+         System.out.println("Muy alto");}
+       if (R==NUM){ 
+         System.out.println("Adivinaste felicidades!");
+         break;}       
+  }
+    System.out.println("Fin del juego");
+ }
+}
